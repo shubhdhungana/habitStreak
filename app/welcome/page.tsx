@@ -148,7 +148,7 @@ export default function Welcome() {
         />
         <button
           onClick={handleAddHabit}
-          className="bg-green-600 text-white p-2 rounded-lg transition duration-300 hover:bg-green-500"
+          className="bg-green-600 mt-2 text-white p-2 rounded-lg transition duration-300 hover:bg-green-500"
         >
           Add Habit
         </button>
