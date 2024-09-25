@@ -1,3 +1,4 @@
+
 "use client";
 
 import StreakEmoji from "./StreakEmoji";
@@ -29,8 +30,12 @@ export default function TodoList({
         {habits.length > 0 ? (
           habits.map((habit) => (
             <div key={habit.id} className="flex items-center mb-2">
-              <span className="flex-grow">{habit.habit}</span>
-              <StreakEmoji streakCount={habit.streak_count} />
+              
+              <span className="flex-grow font-bold capitalize ">{habit.habit}</span>
+              
+              {/* Display the streak count with fire emoji */}
+              <span className="mx-4 font-semibold">{habit.streak_count} 🔥</span>
+
               <button
                 onClick={() => onStreakSubmit(habit)}
                 className="bg-blue-500 text-white p-2 rounded ml-2"
@@ -43,7 +48,9 @@ export default function TodoList({
               >
                 Delete
               </button>
+              
             </div>
+            
           ))
         ) : (
           <p>No habits found.</p>
