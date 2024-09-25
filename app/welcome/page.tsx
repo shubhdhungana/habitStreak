@@ -128,7 +128,7 @@ export default function Welcome() {
   if (loading) return <div className="text-center">Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-200 to-purple-300 p-8 flex flex-col items-center relative">
+    <div className="min-h-screen bg-gradient-to-r from-blue-200 to-grey-100 p-8 flex flex-col items-center relative">
       {/* Username/Email Display */}
       <div className="absolute top-4 right-4 text-gray-800 font-medium">
         {user?.email}
@@ -148,7 +148,7 @@ export default function Welcome() {
         />
         <button
           onClick={handleAddHabit}
-          className="bg-green-600 mt-2 text-white p-2 rounded-lg transition duration-300 hover:bg-green-500"
+          className="bg-yellow-600 mt-2 text-white p-2 rounded-lg transition duration-300 hover:bg-green-500"
         >
           Add Habit
         </button>
