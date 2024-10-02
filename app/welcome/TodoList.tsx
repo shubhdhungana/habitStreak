@@ -48,7 +48,7 @@ export default function TodoList({
                 onClick={() => onDeleteHabit(habit.id)}
                 className="bg-red-500 text-white p-2 rounded ml-2"
               >
-                Delete Habit
+                Delete
               </button>
             </div>
           ))

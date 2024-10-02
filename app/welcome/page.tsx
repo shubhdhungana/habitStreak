@@ -128,11 +128,18 @@ export default function Welcome() {
   if (loading) return <div className="text-center">Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-200 to-purple-300 p-8 flex flex-col items-center relative">
+    <div className="min-h-screen bg-gradient-to-r from-blue-500 to-red-300 p-8 flex flex-col items-center relative">
       {/* Username/Email Display */}
-      <div className="absolute top-4 right-4 text-gray-800 font-medium">
+      <div className="absolute top-4 right-4 text-gray-800 text-sm-bold">
         {user?.email}
       </div>
+       {/* Logout Button */}
+       <button
+        onClick={handleLogout}
+        className="absolute top-11 right-4 bg-red-600 text-white p-2 rounded-lg transition duration-300 hover:bg-red-500"
+      >
+        Logout
+      </button>
 
       <h1 className="text-4xl font-bold text-gray-800 mb-2">HabitStreak</h1>
       <h2 className="text-xl text-gray-600 mb-6">Build of Consistency</h2>
@@ -161,13 +168,7 @@ export default function Welcome() {
         onDeleteHabit={handleDeleteHabit}
       />
 
-      {/* Logout Button */}
-      <button
-        onClick={handleLogout}
-        className="mt-6 bg-red-600 text-white p-2 rounded-lg transition duration-300 hover:bg-red-500"
-      >
-        Logout
-      </button>
+     
     </div>
   );
 }
